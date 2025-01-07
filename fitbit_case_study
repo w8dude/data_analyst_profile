@@ -1,23 +1,82 @@
 {
  "cells": [
   {
+   "cell_type": "markdown",
+   "id": "d6251c5f",
+   "metadata": {
+    "papermill": {
+     "duration": 0.002028,
+     "end_time": "2025-01-07T19:20:52.788290",
+     "exception": false,
+     "start_time": "2025-01-07T19:20:52.786262",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "##Mission Statement\n",
+    "\n",
+    "Bellabeat, a high-tech manufacturer of women's health-centric products, seeks to expand its presence within the global smart device market. This project will focus on a specific Bellabeat product, leveraging smart device data analysis to understand consumer usage patterns and preferences. The insights gleaned from this analysis will inform strategic recommendations presented to the Bellabeat executive team, including Urška Sršen (Cofounder and Chief Creative Officer) and Sando Mur (Mathematician and Bellabeat Cofounder; key member of the Bellabeat executive team), as well as the dedicated Bellabeat marketing team."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1c12fded",
+   "metadata": {
+    "papermill": {
+     "duration": 0.001344,
+     "end_time": "2025-01-07T19:20:52.791207",
+     "exception": false,
+     "start_time": "2025-01-07T19:20:52.789863",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "##Key Questions\n",
+    "\n",
+    "1. What are some trends in smart device usage?\n",
+    "2. How could these trends apply to Bellabeat customers?\n",
+    "3. How could these trends help influence Bellabeat marketing strategy?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "60fd5955",
+   "metadata": {
+    "papermill": {
+     "duration": 0.001251,
+     "end_time": "2025-01-07T19:20:52.793775",
+     "exception": false,
+     "start_time": "2025-01-07T19:20:52.792524",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "##Business Task\n",
+    "\n",
+    "How are our customers using our smart devices?"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "a348653f",
+   "id": "9eab871e",
    "metadata": {
     "_execution_state": "idle",
     "_uuid": "051d70d956493feee0c6d64651c6a088724dca2a",
     "execution": {
-     "iopub.execute_input": "2024-12-09T19:37:49.325978Z",
-     "iopub.status.busy": "2024-12-09T19:37:49.323510Z",
-     "iopub.status.idle": "2024-12-09T19:37:50.566345Z",
-     "shell.execute_reply": "2024-12-09T19:37:50.564380Z"
+     "iopub.execute_input": "2025-01-07T19:20:52.801263Z",
+     "iopub.status.busy": "2025-01-07T19:20:52.798827Z",
+     "iopub.status.idle": "2025-01-07T19:20:54.016201Z",
+     "shell.execute_reply": "2025-01-07T19:20:54.013684Z"
     },
     "papermill": {
-     "duration": 1.250863,
-     "end_time": "2024-12-09T19:37:50.569704",
+     "duration": 1.224047,
+     "end_time": "2025-01-07T19:20:54.019227",
      "exception": false,
-     "start_time": "2024-12-09T19:37:49.318841",
+     "start_time": "2025-01-07T19:20:52.795180",
      "status": "completed"
     },
     "tags": []
@@ -75,37 +134,9 @@
     "\n",
     "# Input data files are available in the read-only \"../input/\" directory\n",
     "# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory\n",
+    "# Input data files are listed as follows: fitbit.\n",
     "\n",
-    "list.files(path = \"../input\")\n",
-    "\n",
-    "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using \"Save & Run All\" \n",
-    "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "id": "d7402e72",
-   "metadata": {
-    "execution": {
-     "iopub.execute_input": "2024-12-09T19:37:50.606900Z",
-     "iopub.status.busy": "2024-12-09T19:37:50.575203Z",
-     "iopub.status.idle": "2024-12-09T19:37:50.619992Z",
-     "shell.execute_reply": "2024-12-09T19:37:50.618288Z"
-    },
-    "papermill": {
-     "duration": 0.051595,
-     "end_time": "2024-12-09T19:37:50.623166",
-     "exception": false,
-     "start_time": "2024-12-09T19:37:50.571571",
-     "status": "completed"
-    },
-    "tags": []
-   },
-   "outputs": [],
-   "source": [
-    "# Make sure we have all the necissary functionality we need for fixing our data set\n",
-    "library(dplyr)"
+    "list.files(path = \"../input\")"
    ]
   }
  ],
@@ -140,14 +171,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 4.59257,
-   "end_time": "2024-12-09T19:37:50.745926",
+   "duration": 4.273166,
+   "end_time": "2025-01-07T19:20:54.141723",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2024-12-09T19:37:46.153356",
+   "start_time": "2025-01-07T19:20:49.868557",
    "version": "2.6.0"
   }
  },
