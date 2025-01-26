@@ -2,13 +2,13 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "9b664342",
+   "id": "c2885d20",
    "metadata": {
     "papermill": {
-     "duration": 0.002236,
-     "end_time": "2025-01-22T21:52:53.466445",
+     "duration": 0.002933,
+     "end_time": "2025-01-26T01:23:00.279194",
      "exception": false,
-     "start_time": "2025-01-22T21:52:53.464209",
+     "start_time": "2025-01-26T01:23:00.276261",
      "status": "completed"
     },
     "tags": []
@@ -20,37 +20,78 @@
   },
   {
    "cell_type": "markdown",
-   "id": "d277104b",
+   "id": "f37c3b32",
    "metadata": {
     "papermill": {
-     "duration": 0.001446,
-     "end_time": "2025-01-22T21:52:53.469610",
+     "duration": 0.002077,
+     "end_time": "2025-01-26T01:23:00.283637",
      "exception": false,
-     "start_time": "2025-01-22T21:52:53.468164",
+     "start_time": "2025-01-26T01:23:00.281560",
      "status": "completed"
     },
     "tags": []
    },
-   "source": []
+   "source": [
+    "# Key Questions\n",
+    "1. What are some trends on Steam's positive ratings page?\n",
+    "2. What are some trends on Steam's game owner numbers?\n",
+    "3. What are some trends on Steam's average player numbers?\n",
+    "4. How can these trends apply to W84it game studio?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e3c58132",
+   "metadata": {
+    "papermill": {
+     "duration": 0.001953,
+     "end_time": "2025-01-26T01:23:00.287629",
+     "exception": false,
+     "start_time": "2025-01-26T01:23:00.285676",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "# Business Task\n",
+    "What is the market potential on the Steam Platform?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3baa8b04",
+   "metadata": {
+    "papermill": {
+     "duration": 0.001748,
+     "end_time": "2025-01-26T01:23:00.291204",
+     "exception": false,
+     "start_time": "2025-01-26T01:23:00.289456",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "# Loading Packages"
+   ]
   },
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "2966c9e4",
+   "id": "eaa897d8",
    "metadata": {
     "_execution_state": "idle",
     "_uuid": "051d70d956493feee0c6d64651c6a088724dca2a",
     "execution": {
-     "iopub.execute_input": "2025-01-22T21:52:53.476653Z",
-     "iopub.status.busy": "2025-01-22T21:52:53.474499Z",
-     "iopub.status.idle": "2025-01-22T21:52:54.776218Z",
-     "shell.execute_reply": "2025-01-22T21:52:54.774399Z"
+     "iopub.execute_input": "2025-01-26T01:23:00.300085Z",
+     "iopub.status.busy": "2025-01-26T01:23:00.297577Z",
+     "iopub.status.idle": "2025-01-26T01:23:01.606511Z",
+     "shell.execute_reply": "2025-01-26T01:23:01.604636Z"
     },
     "papermill": {
-     "duration": 1.30787,
-     "end_time": "2025-01-22T21:52:54.778817",
+     "duration": 1.315949,
+     "end_time": "2025-01-26T01:23:01.608961",
      "exception": false,
-     "start_time": "2025-01-22T21:52:53.470947",
+     "start_time": "2025-01-26T01:23:00.293012",
      "status": "completed"
     },
     "tags": []
@@ -98,19 +139,58 @@
     }
    ],
    "source": [
-    "# This R environment comes with many helpful analytics packages installed\n",
-    "# It is defined by the kaggle/rstats Docker image: https://github.com/kaggle/docker-rstats\n",
-    "# For example, here's a helpful package to load\n",
-    "\n",
     "library(tidyverse) # metapackage of all tidyverse packages\n",
+    "library(lubridate) \n",
+    "library(dplyr)\n",
+    "library(ggplot2)\n",
+    "library(tidyr)\n",
     "\n",
-    "# Input data files are available in the read-only \"../input/\" directory\n",
-    "# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory\n",
-    "\n",
-    "list.files(path = \"../input\")\n",
-    "\n",
-    "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using \"Save & Run All\" \n",
-    "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session"
+    "list.files(path = \"../input\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "285bb933",
+   "metadata": {
+    "papermill": {
+     "duration": 0.002267,
+     "end_time": "2025-01-26T01:23:01.613570",
+     "exception": false,
+     "start_time": "2025-01-26T01:23:01.611303",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "# Importing Dataset\n",
+    "For our analysis, we will be using the Steam Store Games Data (CC0: Public Domain, dataset made available through Nik Davis). We will be focusing on the Steam page, Steam tags, and Steam requirements."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "0b0fab0a",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-01-26T01:23:01.650544Z",
+     "iopub.status.busy": "2025-01-26T01:23:01.619963Z",
+     "iopub.status.idle": "2025-01-26T01:23:06.491260Z",
+     "shell.execute_reply": "2025-01-26T01:23:06.489441Z"
+    },
+    "papermill": {
+     "duration": 4.878301,
+     "end_time": "2025-01-26T01:23:06.493988",
+     "exception": false,
+     "start_time": "2025-01-26T01:23:01.615687",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "page <- read.csv(\"/kaggle/input/steam-store-games/steam.csv\")\n",
+    "require <- read.csv(\"/kaggle/input/steam-store-games/steam_requirements_data.csv\")\n",
+    "tag <- read.csv(\"/kaggle/input/steam-store-games/steamspy_tag_data.csv\")"
    ]
   }
  ],
@@ -124,6 +204,7 @@
      "sourceType": "datasetVersion"
     }
    ],
+   "dockerImageVersionId": 30749,
    "isGpuEnabled": false,
    "isInternetEnabled": true,
    "language": "r",
@@ -144,14 +225,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 4.66604,
-   "end_time": "2025-01-22T21:52:54.901575",
+   "duration": 9.466129,
+   "end_time": "2025-01-26T01:23:06.618626",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-01-22T21:52:50.235535",
+   "start_time": "2025-01-26T01:22:57.152497",
    "version": "2.6.0"
   }
  },
