@@ -2,13 +2,13 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "3bf44568",
+   "id": "109f2d71",
    "metadata": {
     "papermill": {
-     "duration": 0.002889,
-     "end_time": "2025-01-28T20:55:57.508346",
+     "duration": 0.00378,
+     "end_time": "2025-01-31T20:57:27.222287",
      "exception": false,
-     "start_time": "2025-01-28T20:55:57.505457",
+     "start_time": "2025-01-31T20:57:27.218507",
      "status": "completed"
     },
     "tags": []
@@ -20,13 +20,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b8276c5c",
+   "id": "c2d3b1dc",
    "metadata": {
     "papermill": {
-     "duration": 0.00228,
-     "end_time": "2025-01-28T20:55:57.513241",
+     "duration": 0.002988,
+     "end_time": "2025-01-31T20:57:27.228591",
      "exception": false,
-     "start_time": "2025-01-28T20:55:57.510961",
+     "start_time": "2025-01-31T20:57:27.225603",
      "status": "completed"
     },
     "tags": []
@@ -41,13 +41,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "01ff8d70",
+   "id": "e1be07e4",
    "metadata": {
     "papermill": {
-     "duration": 0.002067,
-     "end_time": "2025-01-28T20:55:57.517498",
+     "duration": 0.002877,
+     "end_time": "2025-01-31T20:57:27.234460",
      "exception": false,
-     "start_time": "2025-01-28T20:55:57.515431",
+     "start_time": "2025-01-31T20:57:27.231583",
      "status": "completed"
     },
     "tags": []
@@ -59,13 +59,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f3d709cc",
+   "id": "46b01eb0",
    "metadata": {
     "papermill": {
-     "duration": 0.002144,
-     "end_time": "2025-01-28T20:55:57.521597",
+     "duration": 0.002955,
+     "end_time": "2025-01-31T20:57:27.240364",
      "exception": false,
-     "start_time": "2025-01-28T20:55:57.519453",
+     "start_time": "2025-01-31T20:57:27.237409",
      "status": "completed"
     },
     "tags": []
@@ -77,21 +77,21 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "e5dd764e",
+   "id": "b848bfac",
    "metadata": {
     "_execution_state": "idle",
     "_uuid": "051d70d956493feee0c6d64651c6a088724dca2a",
     "execution": {
-     "iopub.execute_input": "2025-01-28T20:55:57.530449Z",
-     "iopub.status.busy": "2025-01-28T20:55:57.528101Z",
-     "iopub.status.idle": "2025-01-28T20:55:58.760036Z",
-     "shell.execute_reply": "2025-01-28T20:55:58.757604Z"
+     "iopub.execute_input": "2025-01-31T20:57:27.250972Z",
+     "iopub.status.busy": "2025-01-31T20:57:27.248531Z",
+     "iopub.status.idle": "2025-01-31T20:57:28.568790Z",
+     "shell.execute_reply": "2025-01-31T20:57:28.566754Z"
     },
     "papermill": {
-     "duration": 1.239501,
-     "end_time": "2025-01-28T20:55:58.763135",
+     "duration": 1.328267,
+     "end_time": "2025-01-31T20:57:28.571521",
      "exception": false,
-     "start_time": "2025-01-28T20:55:57.523634",
+     "start_time": "2025-01-31T20:57:27.243254",
      "status": "completed"
     },
     "tags": []
@@ -120,6 +120,50 @@
      ]
     },
     {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Attaching package: ‘data.table’\n",
+      "\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "The following objects are masked from ‘package:lubridate’:\n",
+      "\n",
+      "    hour, isoweek, mday, minute, month, quarter, second, wday, week,\n",
+      "    yday, year\n",
+      "\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "The following objects are masked from ‘package:dplyr’:\n",
+      "\n",
+      "    between, first, last\n",
+      "\n",
+      "\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "The following object is masked from ‘package:purrr’:\n",
+      "\n",
+      "    transpose\n",
+      "\n",
+      "\n"
+     ]
+    },
+    {
      "data": {
       "text/html": [
        "'steam-store-games'"
@@ -144,19 +188,20 @@
     "library(dplyr)\n",
     "library(ggplot2)\n",
     "library(tidyr)\n",
+    "library(data.table)\n",
     "\n",
     "list.files(path = \"../input\")"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "3ed35844",
+   "id": "2aed4e12",
    "metadata": {
     "papermill": {
-     "duration": 0.002459,
-     "end_time": "2025-01-28T20:55:58.768336",
+     "duration": 0.003619,
+     "end_time": "2025-01-31T20:57:28.578995",
      "exception": false,
-     "start_time": "2025-01-28T20:55:58.765877",
+     "start_time": "2025-01-31T20:57:28.575376",
      "status": "completed"
     },
     "tags": []
@@ -169,19 +214,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "3c71807e",
+   "id": "4f75c336",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-01-28T20:55:58.807563Z",
-     "iopub.status.busy": "2025-01-28T20:55:58.775107Z",
-     "iopub.status.idle": "2025-01-28T20:56:03.648493Z",
-     "shell.execute_reply": "2025-01-28T20:56:03.646702Z"
+     "iopub.execute_input": "2025-01-31T20:57:28.637239Z",
+     "iopub.status.busy": "2025-01-31T20:57:28.599338Z",
+     "iopub.status.idle": "2025-01-31T20:57:33.305421Z",
+     "shell.execute_reply": "2025-01-31T20:57:33.303641Z"
     },
     "papermill": {
-     "duration": 4.880437,
-     "end_time": "2025-01-28T20:56:03.651185",
+     "duration": 4.720542,
+     "end_time": "2025-01-31T20:57:33.307932",
      "exception": false,
-     "start_time": "2025-01-28T20:55:58.770748",
+     "start_time": "2025-01-31T20:57:28.587390",
      "status": "completed"
     },
     "tags": []
@@ -195,13 +240,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "17fe01b0",
+   "id": "50056b56",
    "metadata": {
     "papermill": {
-     "duration": 0.00267,
-     "end_time": "2025-01-28T20:56:03.656802",
+     "duration": 0.003607,
+     "end_time": "2025-01-31T20:57:33.315292",
      "exception": false,
-     "start_time": "2025-01-28T20:56:03.654132",
+     "start_time": "2025-01-31T20:57:33.311685",
      "status": "completed"
     },
     "tags": []
@@ -213,19 +258,19 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "7f047c8f",
+   "id": "3fe8a266",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-01-28T20:56:03.665395Z",
-     "iopub.status.busy": "2025-01-28T20:56:03.663954Z",
-     "iopub.status.idle": "2025-01-28T20:56:03.937423Z",
-     "shell.execute_reply": "2025-01-28T20:56:03.935706Z"
+     "iopub.execute_input": "2025-01-31T20:57:33.325821Z",
+     "iopub.status.busy": "2025-01-31T20:57:33.324249Z",
+     "iopub.status.idle": "2025-01-31T20:57:33.538860Z",
+     "shell.execute_reply": "2025-01-31T20:57:33.537156Z"
     },
     "papermill": {
-     "duration": 0.280186,
-     "end_time": "2025-01-28T20:56:03.939762",
+     "duration": 0.222278,
+     "end_time": "2025-01-31T20:57:33.541112",
      "exception": false,
-     "start_time": "2025-01-28T20:56:03.659576",
+     "start_time": "2025-01-31T20:57:33.318834",
      "status": "completed"
     },
     "tags": []
@@ -497,24 +542,683 @@
   },
   {
    "cell_type": "markdown",
-   "id": "529bda57",
+   "id": "40efbf7c",
    "metadata": {
     "papermill": {
-     "duration": 0.003792,
-     "end_time": "2025-01-28T20:56:03.947589",
+     "duration": 0.004768,
+     "end_time": "2025-01-31T20:57:33.550943",
      "exception": false,
-     "start_time": "2025-01-28T20:56:03.943797",
+     "start_time": "2025-01-31T20:57:33.546175",
      "status": "completed"
     },
     "tags": []
    },
    "source": [
     "# Data Formating and Cleaning\n",
-    "Initially there are no prevelent issues with this data but using google sheets we discover some things that can be improved.\n",
-    "First we will need to trim out white space as we will need more accuracy for when we edit the formating.\n",
-    "Secondly we need to fix some of the blank inputs in steam (completing the publisher column) and requirements (changing empty space to null)\n",
-    "\n",
-    "We will"
+    "After reviewing the initial data in Google Sheets, we've pinpointed some areas for enhancement. First, we'll remove excess whitespace to ensure accurate formatting. We'll also fill in missing publisher information in the Steam data. To make the data more accessible and usable, we'll create dedicated tables for system requirements and separate the game categories from the main Steam dataset."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "f68abbc6",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-01-31T20:57:33.563868Z",
+     "iopub.status.busy": "2025-01-31T20:57:33.562300Z",
+     "iopub.status.idle": "2025-01-31T20:57:39.232332Z",
+     "shell.execute_reply": "2025-01-31T20:57:39.230597Z"
+    },
+    "papermill": {
+     "duration": 5.679101,
+     "end_time": "2025-01-31T20:57:39.234719",
+     "exception": false,
+     "start_time": "2025-01-31T20:57:33.555618",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#trim out white space\n",
+    "trim_page <- data.frame(lapply(page, trimws), stringsAsFactors = FALSE)\n",
+    "trim_require <- data.frame(lapply(require, trimws), stringsAsFactors = FALSE)\n",
+    "trim_tag <- data.frame(lapply(tag, trimws), stringsAsFactors = FALSE)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "56348e77",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-01-31T20:57:39.248021Z",
+     "iopub.status.busy": "2025-01-31T20:57:39.246453Z",
+     "iopub.status.idle": "2025-01-31T20:57:39.462337Z",
+     "shell.execute_reply": "2025-01-31T20:57:39.460614Z"
+    },
+    "papermill": {
+     "duration": 0.224739,
+     "end_time": "2025-01-31T20:57:39.464541",
+     "exception": false,
+     "start_time": "2025-01-31T20:57:39.239802",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<table class=\"dataframe\">\n",
+       "<caption>A data.frame: 6 × 18</caption>\n",
+       "<thead>\n",
+       "\t<tr><th></th><th scope=col>appid</th><th scope=col>name</th><th scope=col>release_date</th><th scope=col>english</th><th scope=col>developer</th><th scope=col>publisher</th><th scope=col>platforms</th><th scope=col>required_age</th><th scope=col>categories</th><th scope=col>genres</th><th scope=col>steamspy_tags</th><th scope=col>achievements</th><th scope=col>positive_ratings</th><th scope=col>negative_ratings</th><th scope=col>average_playtime</th><th scope=col>median_playtime</th><th scope=col>owners</th><th scope=col>price</th></tr>\n",
+       "\t<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>\n",
+       "</thead>\n",
+       "<tbody>\n",
+       "\t<tr><th scope=row>1</th><td>10</td><td>Counter-Strike           </td><td>2000-11-01</td><td>1</td><td>Valve           </td><td>Valve</td><td>windows;mac;linux</td><td>0</td><td>Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled</td><td>Action</td><td>Action;FPS;Multiplayer      </td><td>0</td><td>124534</td><td>3339</td><td>17612</td><td>317</td><td>10000000-20000000</td><td>7.19</td></tr>\n",
+       "\t<tr><th scope=row>2</th><td>20</td><td>Team Fortress Classic    </td><td>1999-04-01</td><td>1</td><td>Valve           </td><td>Valve</td><td>windows;mac;linux</td><td>0</td><td>Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled</td><td>Action</td><td>Action;FPS;Multiplayer      </td><td>0</td><td>3318  </td><td>633 </td><td>277  </td><td>62 </td><td>5000000-10000000 </td><td>3.99</td></tr>\n",
+       "\t<tr><th scope=row>3</th><td>30</td><td>Day of Defeat            </td><td>2003-05-01</td><td>1</td><td>Valve           </td><td>Valve</td><td>windows;mac;linux</td><td>0</td><td>Multi-player;Valve Anti-Cheat enabled                                       </td><td>Action</td><td>FPS;World War II;Multiplayer</td><td>0</td><td>3416  </td><td>398 </td><td>187  </td><td>34 </td><td>5000000-10000000 </td><td>3.99</td></tr>\n",
+       "\t<tr><th scope=row>4</th><td>40</td><td>Deathmatch Classic       </td><td>2001-06-01</td><td>1</td><td>Valve           </td><td>Valve</td><td>windows;mac;linux</td><td>0</td><td>Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled</td><td>Action</td><td>Action;FPS;Multiplayer      </td><td>0</td><td>1273  </td><td>267 </td><td>258  </td><td>184</td><td>5000000-10000000 </td><td>3.99</td></tr>\n",
+       "\t<tr><th scope=row>5</th><td>50</td><td>Half-Life: Opposing Force</td><td>1999-11-01</td><td>1</td><td>Gearbox Software</td><td>Valve</td><td>windows;mac;linux</td><td>0</td><td>Single-player;Multi-player;Valve Anti-Cheat enabled                         </td><td>Action</td><td>FPS;Action;Sci-fi           </td><td>0</td><td>5250  </td><td>288 </td><td>624  </td><td>415</td><td>5000000-10000000 </td><td>3.99</td></tr>\n",
+       "\t<tr><th scope=row>6</th><td>60</td><td>Ricochet                 </td><td>2000-11-01</td><td>1</td><td>Valve           </td><td>Valve</td><td>windows;mac;linux</td><td>0</td><td>Multi-player;Online Multi-Player;Valve Anti-Cheat enabled                   </td><td>Action</td><td>Action;FPS;Multiplayer      </td><td>0</td><td>2758  </td><td>684 </td><td>175  </td><td>10 </td><td>5000000-10000000 </td><td>3.99</td></tr>\n",
+       "</tbody>\n",
+       "</table>\n"
+      ],
+      "text/latex": [
+       "A data.frame: 6 × 18\n",
+       "\\begin{tabular}{r|llllllllllllllllll}\n",
+       "  & appid & name & release\\_date & english & developer & publisher & platforms & required\\_age & categories & genres & steamspy\\_tags & achievements & positive\\_ratings & negative\\_ratings & average\\_playtime & median\\_playtime & owners & price\\\\\n",
+       "  & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr>\\\\\n",
+       "\\hline\n",
+       "\t1 & 10 & Counter-Strike            & 2000-11-01 & 1 & Valve            & Valve & windows;mac;linux & 0 & Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled & Action & Action;FPS;Multiplayer       & 0 & 124534 & 3339 & 17612 & 317 & 10000000-20000000 & 7.19\\\\\n",
+       "\t2 & 20 & Team Fortress Classic     & 1999-04-01 & 1 & Valve            & Valve & windows;mac;linux & 0 & Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled & Action & Action;FPS;Multiplayer       & 0 & 3318   & 633  & 277   & 62  & 5000000-10000000  & 3.99\\\\\n",
+       "\t3 & 30 & Day of Defeat             & 2003-05-01 & 1 & Valve            & Valve & windows;mac;linux & 0 & Multi-player;Valve Anti-Cheat enabled                                        & Action & FPS;World War II;Multiplayer & 0 & 3416   & 398  & 187   & 34  & 5000000-10000000  & 3.99\\\\\n",
+       "\t4 & 40 & Deathmatch Classic        & 2001-06-01 & 1 & Valve            & Valve & windows;mac;linux & 0 & Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled & Action & Action;FPS;Multiplayer       & 0 & 1273   & 267  & 258   & 184 & 5000000-10000000  & 3.99\\\\\n",
+       "\t5 & 50 & Half-Life: Opposing Force & 1999-11-01 & 1 & Gearbox Software & Valve & windows;mac;linux & 0 & Single-player;Multi-player;Valve Anti-Cheat enabled                          & Action & FPS;Action;Sci-fi            & 0 & 5250   & 288  & 624   & 415 & 5000000-10000000  & 3.99\\\\\n",
+       "\t6 & 60 & Ricochet                  & 2000-11-01 & 1 & Valve            & Valve & windows;mac;linux & 0 & Multi-player;Online Multi-Player;Valve Anti-Cheat enabled                    & Action & Action;FPS;Multiplayer       & 0 & 2758   & 684  & 175   & 10  & 5000000-10000000  & 3.99\\\\\n",
+       "\\end{tabular}\n"
+      ],
+      "text/markdown": [
+       "\n",
+       "A data.frame: 6 × 18\n",
+       "\n",
+       "| <!--/--> | appid &lt;chr&gt; | name &lt;chr&gt; | release_date &lt;chr&gt; | english &lt;chr&gt; | developer &lt;chr&gt; | publisher &lt;chr&gt; | platforms &lt;chr&gt; | required_age &lt;chr&gt; | categories &lt;chr&gt; | genres &lt;chr&gt; | steamspy_tags &lt;chr&gt; | achievements &lt;chr&gt; | positive_ratings &lt;chr&gt; | negative_ratings &lt;chr&gt; | average_playtime &lt;chr&gt; | median_playtime &lt;chr&gt; | owners &lt;chr&gt; | price &lt;chr&gt; |\n",
+       "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n",
+       "| 1 | 10 | Counter-Strike            | 2000-11-01 | 1 | Valve            | Valve | windows;mac;linux | 0 | Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled | Action | Action;FPS;Multiplayer       | 0 | 124534 | 3339 | 17612 | 317 | 10000000-20000000 | 7.19 |\n",
+       "| 2 | 20 | Team Fortress Classic     | 1999-04-01 | 1 | Valve            | Valve | windows;mac;linux | 0 | Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled | Action | Action;FPS;Multiplayer       | 0 | 3318   | 633  | 277   | 62  | 5000000-10000000  | 3.99 |\n",
+       "| 3 | 30 | Day of Defeat             | 2003-05-01 | 1 | Valve            | Valve | windows;mac;linux | 0 | Multi-player;Valve Anti-Cheat enabled                                        | Action | FPS;World War II;Multiplayer | 0 | 3416   | 398  | 187   | 34  | 5000000-10000000  | 3.99 |\n",
+       "| 4 | 40 | Deathmatch Classic        | 2001-06-01 | 1 | Valve            | Valve | windows;mac;linux | 0 | Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled | Action | Action;FPS;Multiplayer       | 0 | 1273   | 267  | 258   | 184 | 5000000-10000000  | 3.99 |\n",
+       "| 5 | 50 | Half-Life: Opposing Force | 1999-11-01 | 1 | Gearbox Software | Valve | windows;mac;linux | 0 | Single-player;Multi-player;Valve Anti-Cheat enabled                          | Action | FPS;Action;Sci-fi            | 0 | 5250   | 288  | 624   | 415 | 5000000-10000000  | 3.99 |\n",
+       "| 6 | 60 | Ricochet                  | 2000-11-01 | 1 | Valve            | Valve | windows;mac;linux | 0 | Multi-player;Online Multi-Player;Valve Anti-Cheat enabled                    | Action | Action;FPS;Multiplayer       | 0 | 2758   | 684  | 175   | 10  | 5000000-10000000  | 3.99 |\n",
+       "\n"
+      ],
+      "text/plain": [
+       "  appid name                      release_date english developer       \n",
+       "1 10    Counter-Strike            2000-11-01   1       Valve           \n",
+       "2 20    Team Fortress Classic     1999-04-01   1       Valve           \n",
+       "3 30    Day of Defeat             2003-05-01   1       Valve           \n",
+       "4 40    Deathmatch Classic        2001-06-01   1       Valve           \n",
+       "5 50    Half-Life: Opposing Force 1999-11-01   1       Gearbox Software\n",
+       "6 60    Ricochet                  2000-11-01   1       Valve           \n",
+       "  publisher platforms         required_age\n",
+       "1 Valve     windows;mac;linux 0           \n",
+       "2 Valve     windows;mac;linux 0           \n",
+       "3 Valve     windows;mac;linux 0           \n",
+       "4 Valve     windows;mac;linux 0           \n",
+       "5 Valve     windows;mac;linux 0           \n",
+       "6 Valve     windows;mac;linux 0           \n",
+       "  categories                                                                  \n",
+       "1 Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled\n",
+       "2 Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled\n",
+       "3 Multi-player;Valve Anti-Cheat enabled                                       \n",
+       "4 Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled\n",
+       "5 Single-player;Multi-player;Valve Anti-Cheat enabled                         \n",
+       "6 Multi-player;Online Multi-Player;Valve Anti-Cheat enabled                   \n",
+       "  genres steamspy_tags                achievements positive_ratings\n",
+       "1 Action Action;FPS;Multiplayer       0            124534          \n",
+       "2 Action Action;FPS;Multiplayer       0            3318            \n",
+       "3 Action FPS;World War II;Multiplayer 0            3416            \n",
+       "4 Action Action;FPS;Multiplayer       0            1273            \n",
+       "5 Action FPS;Action;Sci-fi            0            5250            \n",
+       "6 Action Action;FPS;Multiplayer       0            2758            \n",
+       "  negative_ratings average_playtime median_playtime owners            price\n",
+       "1 3339             17612            317             10000000-20000000 7.19 \n",
+       "2 633              277              62              5000000-10000000  3.99 \n",
+       "3 398              187              34              5000000-10000000  3.99 \n",
+       "4 267              258              184             5000000-10000000  3.99 \n",
+       "5 288              624              415             5000000-10000000  3.99 \n",
+       "6 684              175              10              5000000-10000000  3.99 "
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<table class=\"dataframe\">\n",
+       "<caption>A data.frame: 6 × 6</caption>\n",
+       "<thead>\n",
+       "\t<tr><th></th><th scope=col>steam_appid</th><th scope=col>pc_requirements</th><th scope=col>mac_requirements</th><th scope=col>linux_requirements</th><th scope=col>minimum</th><th scope=col>recommended</th></tr>\n",
+       "\t<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>\n",
+       "</thead>\n",
+       "<tbody>\n",
+       "\t<tr><th scope=row>1</th><td>10</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td></tr>\n",
+       "\t<tr><th scope=row>2</th><td>20</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td></tr>\n",
+       "\t<tr><th scope=row>3</th><td>30</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td></tr>\n",
+       "\t<tr><th scope=row>4</th><td>40</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td></tr>\n",
+       "\t<tr><th scope=row>5</th><td>50</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td></tr>\n",
+       "\t<tr><th scope=row>6</th><td>60</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td></tr>\n",
+       "</tbody>\n",
+       "</table>\n"
+      ],
+      "text/latex": [
+       "A data.frame: 6 × 6\n",
+       "\\begin{tabular}{r|llllll}\n",
+       "  & steam\\_appid & pc\\_requirements & mac\\_requirements & linux\\_requirements & minimum & recommended\\\\\n",
+       "  & <chr> & <chr> & <chr> & <chr> & <chr> & <chr>\\\\\n",
+       "\\hline\n",
+       "\t1 & 10 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection & \\\\\n",
+       "\t2 & 20 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection & \\\\\n",
+       "\t3 & 30 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection & \\\\\n",
+       "\t4 & 40 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection & \\\\\n",
+       "\t5 & 50 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection & \\\\\n",
+       "\t6 & 60 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection & \\\\\n",
+       "\\end{tabular}\n"
+      ],
+      "text/markdown": [
+       "\n",
+       "A data.frame: 6 × 6\n",
+       "\n",
+       "| <!--/--> | steam_appid &lt;chr&gt; | pc_requirements &lt;chr&gt; | mac_requirements &lt;chr&gt; | linux_requirements &lt;chr&gt; | minimum &lt;chr&gt; | recommended &lt;chr&gt; |\n",
+       "|---|---|---|---|---|---|---|\n",
+       "| 1 | 10 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |\n",
+       "| 2 | 20 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |\n",
+       "| 3 | 30 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |\n",
+       "| 4 | 40 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |\n",
+       "| 5 | 50 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |\n",
+       "| 6 | 60 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |\n",
+       "\n"
+      ],
+      "text/plain": [
+       "  steam_appid\n",
+       "1 10         \n",
+       "2 20         \n",
+       "3 30         \n",
+       "4 40         \n",
+       "5 50         \n",
+       "6 60         \n",
+       "  pc_requirements                                                                                                                                                                                                                                                                                                                             \n",
+       "1 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "2 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "3 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "4 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "5 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "6 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "  mac_requirements                                                                                                                                                                                 \n",
+       "1 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "2 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "3 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "4 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "5 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "6 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "  linux_requirements                                                                                                                                                                                                                                              \n",
+       "1 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "2 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "3 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "4 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "5 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "6 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "  minimum                                                                                                                                                                                                     \n",
+       "1 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "2 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "3 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "4 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "5 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "6 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "  recommended\n",
+       "1            \n",
+       "2            \n",
+       "3            \n",
+       "4            \n",
+       "5            \n",
+       "6            "
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<table class=\"dataframe\">\n",
+       "<caption>A data.frame: 6 × 372</caption>\n",
+       "<thead>\n",
+       "\t<tr><th></th><th scope=col>appid</th><th scope=col>X1980s</th><th scope=col>X1990s</th><th scope=col>X2.5d</th><th scope=col>X2d</th><th scope=col>X2d_fighter</th><th scope=col>X360_video</th><th scope=col>X3d</th><th scope=col>X3d_platformer</th><th scope=col>X3d_vision</th><th scope=col>⋯</th><th scope=col>warhammer_40k</th><th scope=col>web_publishing</th><th scope=col>werewolves</th><th scope=col>western</th><th scope=col>word_game</th><th scope=col>world_war_i</th><th scope=col>world_war_ii</th><th scope=col>wrestling</th><th scope=col>zombies</th><th scope=col>e_sports</th></tr>\n",
+       "\t<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>\n",
+       "</thead>\n",
+       "<tbody>\n",
+       "\t<tr><th scope=row>1</th><td>10</td><td>144</td><td>564</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0 </td><td>0</td><td>0</td><td>⋯</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0  </td><td>0</td><td>0</td><td>550</td></tr>\n",
+       "\t<tr><th scope=row>2</th><td>20</td><td>0  </td><td>71 </td><td>0</td><td>0</td><td>0</td><td>0</td><td>0 </td><td>0</td><td>0</td><td>⋯</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0  </td><td>0</td><td>0</td><td>0  </td></tr>\n",
+       "\t<tr><th scope=row>3</th><td>30</td><td>0  </td><td>0  </td><td>0</td><td>0</td><td>0</td><td>0</td><td>0 </td><td>0</td><td>0</td><td>⋯</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>122</td><td>0</td><td>0</td><td>0  </td></tr>\n",
+       "\t<tr><th scope=row>4</th><td>40</td><td>0  </td><td>0  </td><td>0</td><td>0</td><td>0</td><td>0</td><td>0 </td><td>0</td><td>0</td><td>⋯</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0  </td><td>0</td><td>0</td><td>0  </td></tr>\n",
+       "\t<tr><th scope=row>5</th><td>50</td><td>0  </td><td>77 </td><td>0</td><td>0</td><td>0</td><td>0</td><td>0 </td><td>0</td><td>0</td><td>⋯</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0  </td><td>0</td><td>0</td><td>0  </td></tr>\n",
+       "\t<tr><th scope=row>6</th><td>60</td><td>0  </td><td>0  </td><td>0</td><td>0</td><td>0</td><td>0</td><td>13</td><td>0</td><td>0</td><td>⋯</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0  </td><td>0</td><td>0</td><td>0  </td></tr>\n",
+       "</tbody>\n",
+       "</table>\n"
+      ],
+      "text/latex": [
+       "A data.frame: 6 × 372\n",
+       "\\begin{tabular}{r|lllllllllllllllllllll}\n",
+       "  & appid & X1980s & X1990s & X2.5d & X2d & X2d\\_fighter & X360\\_video & X3d & X3d\\_platformer & X3d\\_vision & ⋯ & warhammer\\_40k & web\\_publishing & werewolves & western & word\\_game & world\\_war\\_i & world\\_war\\_ii & wrestling & zombies & e\\_sports\\\\\n",
+       "  & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & ⋯ & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr>\\\\\n",
+       "\\hline\n",
+       "\t1 & 10 & 144 & 564 & 0 & 0 & 0 & 0 & 0  & 0 & 0 & ⋯ & 0 & 0 & 0 & 0 & 0 & 0 & 0   & 0 & 0 & 550\\\\\n",
+       "\t2 & 20 & 0   & 71  & 0 & 0 & 0 & 0 & 0  & 0 & 0 & ⋯ & 0 & 0 & 0 & 0 & 0 & 0 & 0   & 0 & 0 & 0  \\\\\n",
+       "\t3 & 30 & 0   & 0   & 0 & 0 & 0 & 0 & 0  & 0 & 0 & ⋯ & 0 & 0 & 0 & 0 & 0 & 5 & 122 & 0 & 0 & 0  \\\\\n",
+       "\t4 & 40 & 0   & 0   & 0 & 0 & 0 & 0 & 0  & 0 & 0 & ⋯ & 0 & 0 & 0 & 0 & 0 & 0 & 0   & 0 & 0 & 0  \\\\\n",
+       "\t5 & 50 & 0   & 77  & 0 & 0 & 0 & 0 & 0  & 0 & 0 & ⋯ & 0 & 0 & 0 & 0 & 0 & 0 & 0   & 0 & 0 & 0  \\\\\n",
+       "\t6 & 60 & 0   & 0   & 0 & 0 & 0 & 0 & 13 & 0 & 0 & ⋯ & 0 & 0 & 0 & 0 & 0 & 0 & 0   & 0 & 0 & 0  \\\\\n",
+       "\\end{tabular}\n"
+      ],
+      "text/markdown": [
+       "\n",
+       "A data.frame: 6 × 372\n",
+       "\n",
+       "| <!--/--> | appid &lt;chr&gt; | X1980s &lt;chr&gt; | X1990s &lt;chr&gt; | X2.5d &lt;chr&gt; | X2d &lt;chr&gt; | X2d_fighter &lt;chr&gt; | X360_video &lt;chr&gt; | X3d &lt;chr&gt; | X3d_platformer &lt;chr&gt; | X3d_vision &lt;chr&gt; | ⋯ ⋯ | warhammer_40k &lt;chr&gt; | web_publishing &lt;chr&gt; | werewolves &lt;chr&gt; | western &lt;chr&gt; | word_game &lt;chr&gt; | world_war_i &lt;chr&gt; | world_war_ii &lt;chr&gt; | wrestling &lt;chr&gt; | zombies &lt;chr&gt; | e_sports &lt;chr&gt; |\n",
+       "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n",
+       "| 1 | 10 | 144 | 564 | 0 | 0 | 0 | 0 | 0  | 0 | 0 | ⋯ | 0 | 0 | 0 | 0 | 0 | 0 | 0   | 0 | 0 | 550 |\n",
+       "| 2 | 20 | 0   | 71  | 0 | 0 | 0 | 0 | 0  | 0 | 0 | ⋯ | 0 | 0 | 0 | 0 | 0 | 0 | 0   | 0 | 0 | 0   |\n",
+       "| 3 | 30 | 0   | 0   | 0 | 0 | 0 | 0 | 0  | 0 | 0 | ⋯ | 0 | 0 | 0 | 0 | 0 | 5 | 122 | 0 | 0 | 0   |\n",
+       "| 4 | 40 | 0   | 0   | 0 | 0 | 0 | 0 | 0  | 0 | 0 | ⋯ | 0 | 0 | 0 | 0 | 0 | 0 | 0   | 0 | 0 | 0   |\n",
+       "| 5 | 50 | 0   | 77  | 0 | 0 | 0 | 0 | 0  | 0 | 0 | ⋯ | 0 | 0 | 0 | 0 | 0 | 0 | 0   | 0 | 0 | 0   |\n",
+       "| 6 | 60 | 0   | 0   | 0 | 0 | 0 | 0 | 13 | 0 | 0 | ⋯ | 0 | 0 | 0 | 0 | 0 | 0 | 0   | 0 | 0 | 0   |\n",
+       "\n"
+      ],
+      "text/plain": [
+       "  appid X1980s X1990s X2.5d X2d X2d_fighter X360_video X3d X3d_platformer\n",
+       "1 10    144    564    0     0   0           0          0   0             \n",
+       "2 20    0      71     0     0   0           0          0   0             \n",
+       "3 30    0      0      0     0   0           0          0   0             \n",
+       "4 40    0      0      0     0   0           0          0   0             \n",
+       "5 50    0      77     0     0   0           0          0   0             \n",
+       "6 60    0      0      0     0   0           0          13  0             \n",
+       "  X3d_vision ⋯ warhammer_40k web_publishing werewolves western word_game\n",
+       "1 0          ⋯ 0             0              0          0       0        \n",
+       "2 0          ⋯ 0             0              0          0       0        \n",
+       "3 0          ⋯ 0             0              0          0       0        \n",
+       "4 0          ⋯ 0             0              0          0       0        \n",
+       "5 0          ⋯ 0             0              0          0       0        \n",
+       "6 0          ⋯ 0             0              0          0       0        \n",
+       "  world_war_i world_war_ii wrestling zombies e_sports\n",
+       "1 0           0            0         0       550     \n",
+       "2 0           0            0         0       0       \n",
+       "3 5           122          0         0       0       \n",
+       "4 0           0            0         0       0       \n",
+       "5 0           0            0         0       0       \n",
+       "6 0           0            0         0       0       "
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "#double check if worked\n",
+    "head(trim_page)\n",
+    "head(trim_require)\n",
+    "head(trim_tag)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "91d0cfe1",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-01-31T20:57:39.480353Z",
+     "iopub.status.busy": "2025-01-31T20:57:39.478809Z",
+     "iopub.status.idle": "2025-01-31T20:57:39.530891Z",
+     "shell.execute_reply": "2025-01-31T20:57:39.529247Z"
+    },
+    "papermill": {
+     "duration": 0.06222,
+     "end_time": "2025-01-31T20:57:39.533035",
+     "exception": false,
+     "start_time": "2025-01-31T20:57:39.470815",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<table class=\"dataframe\">\n",
+       "<caption>A data.frame: 6 × 18</caption>\n",
+       "<thead>\n",
+       "\t<tr><th></th><th scope=col>appid</th><th scope=col>name</th><th scope=col>release_date</th><th scope=col>english</th><th scope=col>developer</th><th scope=col>publisher</th><th scope=col>platforms</th><th scope=col>required_age</th><th scope=col>categories</th><th scope=col>genres</th><th scope=col>steamspy_tags</th><th scope=col>achievements</th><th scope=col>positive_ratings</th><th scope=col>negative_ratings</th><th scope=col>average_playtime</th><th scope=col>median_playtime</th><th scope=col>owners</th><th scope=col>price</th></tr>\n",
+       "\t<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>\n",
+       "</thead>\n",
+       "<tbody>\n",
+       "\t<tr><th scope=row>2438</th><td>270010</td><td>Time Rifters      </td><td>2014-10-21</td><td>1</td><td>Proton Studio Inc                                </td><td></td><td>windows;mac      </td><td>0</td><td>Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Workshop;Steam Leaderboards;Includes level editor;Commentary available</td><td>Action;Casual;Indie             </td><td>Action;Casual;Shooter      </td><td>35</td><td>271 </td><td>36 </td><td>374</td><td>374</td><td>0-20000       </td><td>6.99</td></tr>\n",
+       "\t<tr><th scope=row>4248</th><td>334690</td><td>Squirreltopia     </td><td>2015-01-12</td><td>1</td><td>Sean Davy                                        </td><td></td><td>windows          </td><td>0</td><td>Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Cloud                                                                 </td><td>Action;Adventure;Indie          </td><td>Indie;Action;Adventure     </td><td>13</td><td>221 </td><td>65 </td><td>135</td><td>135</td><td>20000-50000   </td><td>0.79</td></tr>\n",
+       "\t<tr><th scope=row>6216</th><td>385770</td><td>Time Clickers     </td><td>2015-07-23</td><td>1</td><td>Proton Studio Inc                                </td><td></td><td>windows;mac;linux</td><td>0</td><td>Single-player;Steam Achievements                                                                                                                         </td><td>Action;Casual;Free to Play;Indie</td><td>Free to Play;Clicker;Casual</td><td>99</td><td>3850</td><td>494</td><td>423</td><td>224</td><td>500000-1000000</td><td>0   </td></tr>\n",
+       "\t<tr><th scope=row>18918</th><td>759830</td><td>Gamma Blast       </td><td>2018-12-07</td><td>1</td><td>Ilias Giouroukis                                 </td><td></td><td>windows;linux    </td><td>0</td><td>Single-player;Steam Achievements;Partial Controller Support                                                                                              </td><td>Action;Indie                    </td><td>Action;Indie;Bullet Hell   </td><td>23</td><td>7   </td><td>1  </td><td>0  </td><td>0  </td><td>0-20000       </td><td>0.79</td></tr>\n",
+       "\t<tr><th scope=row>23322</th><td>889530</td><td>Sharp             </td><td>2018-09-01</td><td>1</td><td>TiredOfCoding;PerfectHumanInterface              </td><td></td><td>windows          </td><td>0</td><td>Single-player;Steam Achievements;Steam Cloud;Includes level editor                                                                                       </td><td>Action;Indie                    </td><td>Action;Indie;Free to Play  </td><td>2 </td><td>7   </td><td>1  </td><td>0  </td><td>0  </td><td>0-20000       </td><td>0   </td></tr>\n",
+       "\t<tr><th scope=row>24638</th><td>938660</td><td>Achtung die Kugel!</td><td>2018-10-11</td><td>1</td><td>Erik Sillén;Fredrik Carlsson;Philip Bretschneider</td><td></td><td>windows          </td><td>0</td><td>Local Multi-Player;Shared/Split Screen;Partial Controller Support                                                                                        </td><td>Action;Casual;Indie             </td><td>Action;Indie;Casual        </td><td>0 </td><td>1   </td><td>2  </td><td>0  </td><td>0  </td><td>0-20000       </td><td>0   </td></tr>\n",
+       "</tbody>\n",
+       "</table>\n"
+      ],
+      "text/latex": [
+       "A data.frame: 6 × 18\n",
+       "\\begin{tabular}{r|llllllllllllllllll}\n",
+       "  & appid & name & release\\_date & english & developer & publisher & platforms & required\\_age & categories & genres & steamspy\\_tags & achievements & positive\\_ratings & negative\\_ratings & average\\_playtime & median\\_playtime & owners & price\\\\\n",
+       "  & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr>\\\\\n",
+       "\\hline\n",
+       "\t2438 & 270010 & Time Rifters       & 2014-10-21 & 1 & Proton Studio Inc                                 &  & windows;mac       & 0 & Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Workshop;Steam Leaderboards;Includes level editor;Commentary available & Action;Casual;Indie              & Action;Casual;Shooter       & 35 & 271  & 36  & 374 & 374 & 0-20000        & 6.99\\\\\n",
+       "\t4248 & 334690 & Squirreltopia      & 2015-01-12 & 1 & Sean Davy                                         &  & windows           & 0 & Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Cloud                                                                  & Action;Adventure;Indie           & Indie;Action;Adventure      & 13 & 221  & 65  & 135 & 135 & 20000-50000    & 0.79\\\\\n",
+       "\t6216 & 385770 & Time Clickers      & 2015-07-23 & 1 & Proton Studio Inc                                 &  & windows;mac;linux & 0 & Single-player;Steam Achievements                                                                                                                          & Action;Casual;Free to Play;Indie & Free to Play;Clicker;Casual & 99 & 3850 & 494 & 423 & 224 & 500000-1000000 & 0   \\\\\n",
+       "\t18918 & 759830 & Gamma Blast        & 2018-12-07 & 1 & Ilias Giouroukis                                  &  & windows;linux     & 0 & Single-player;Steam Achievements;Partial Controller Support                                                                                               & Action;Indie                     & Action;Indie;Bullet Hell    & 23 & 7    & 1   & 0   & 0   & 0-20000        & 0.79\\\\\n",
+       "\t23322 & 889530 & Sharp              & 2018-09-01 & 1 & TiredOfCoding;PerfectHumanInterface               &  & windows           & 0 & Single-player;Steam Achievements;Steam Cloud;Includes level editor                                                                                        & Action;Indie                     & Action;Indie;Free to Play   & 2  & 7    & 1   & 0   & 0   & 0-20000        & 0   \\\\\n",
+       "\t24638 & 938660 & Achtung die Kugel! & 2018-10-11 & 1 & Erik Sillén;Fredrik Carlsson;Philip Bretschneider &  & windows           & 0 & Local Multi-Player;Shared/Split Screen;Partial Controller Support                                                                                         & Action;Casual;Indie              & Action;Indie;Casual         & 0  & 1    & 2   & 0   & 0   & 0-20000        & 0   \\\\\n",
+       "\\end{tabular}\n"
+      ],
+      "text/markdown": [
+       "\n",
+       "A data.frame: 6 × 18\n",
+       "\n",
+       "| <!--/--> | appid &lt;chr&gt; | name &lt;chr&gt; | release_date &lt;chr&gt; | english &lt;chr&gt; | developer &lt;chr&gt; | publisher &lt;chr&gt; | platforms &lt;chr&gt; | required_age &lt;chr&gt; | categories &lt;chr&gt; | genres &lt;chr&gt; | steamspy_tags &lt;chr&gt; | achievements &lt;chr&gt; | positive_ratings &lt;chr&gt; | negative_ratings &lt;chr&gt; | average_playtime &lt;chr&gt; | median_playtime &lt;chr&gt; | owners &lt;chr&gt; | price &lt;chr&gt; |\n",
+       "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n",
+       "| 2438 | 270010 | Time Rifters       | 2014-10-21 | 1 | Proton Studio Inc                                 | <!----> | windows;mac       | 0 | Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Workshop;Steam Leaderboards;Includes level editor;Commentary available | Action;Casual;Indie              | Action;Casual;Shooter       | 35 | 271  | 36  | 374 | 374 | 0-20000        | 6.99 |\n",
+       "| 4248 | 334690 | Squirreltopia      | 2015-01-12 | 1 | Sean Davy                                         | <!----> | windows           | 0 | Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Cloud                                                                  | Action;Adventure;Indie           | Indie;Action;Adventure      | 13 | 221  | 65  | 135 | 135 | 20000-50000    | 0.79 |\n",
+       "| 6216 | 385770 | Time Clickers      | 2015-07-23 | 1 | Proton Studio Inc                                 | <!----> | windows;mac;linux | 0 | Single-player;Steam Achievements                                                                                                                          | Action;Casual;Free to Play;Indie | Free to Play;Clicker;Casual | 99 | 3850 | 494 | 423 | 224 | 500000-1000000 | 0    |\n",
+       "| 18918 | 759830 | Gamma Blast        | 2018-12-07 | 1 | Ilias Giouroukis                                  | <!----> | windows;linux     | 0 | Single-player;Steam Achievements;Partial Controller Support                                                                                               | Action;Indie                     | Action;Indie;Bullet Hell    | 23 | 7    | 1   | 0   | 0   | 0-20000        | 0.79 |\n",
+       "| 23322 | 889530 | Sharp              | 2018-09-01 | 1 | TiredOfCoding;PerfectHumanInterface               | <!----> | windows           | 0 | Single-player;Steam Achievements;Steam Cloud;Includes level editor                                                                                        | Action;Indie                     | Action;Indie;Free to Play   | 2  | 7    | 1   | 0   | 0   | 0-20000        | 0    |\n",
+       "| 24638 | 938660 | Achtung die Kugel! | 2018-10-11 | 1 | Erik Sillén;Fredrik Carlsson;Philip Bretschneider | <!----> | windows           | 0 | Local Multi-Player;Shared/Split Screen;Partial Controller Support                                                                                         | Action;Casual;Indie              | Action;Indie;Casual         | 0  | 1    | 2   | 0   | 0   | 0-20000        | 0    |\n",
+       "\n"
+      ],
+      "text/plain": [
+       "      appid  name               release_date english\n",
+       "2438  270010 Time Rifters       2014-10-21   1      \n",
+       "4248  334690 Squirreltopia      2015-01-12   1      \n",
+       "6216  385770 Time Clickers      2015-07-23   1      \n",
+       "18918 759830 Gamma Blast        2018-12-07   1      \n",
+       "23322 889530 Sharp              2018-09-01   1      \n",
+       "24638 938660 Achtung die Kugel! 2018-10-11   1      \n",
+       "      developer                                         publisher\n",
+       "2438  Proton Studio Inc                                          \n",
+       "4248  Sean Davy                                                  \n",
+       "6216  Proton Studio Inc                                          \n",
+       "18918 Ilias Giouroukis                                           \n",
+       "23322 TiredOfCoding;PerfectHumanInterface                        \n",
+       "24638 Erik Sillén;Fredrik Carlsson;Philip Bretschneider          \n",
+       "      platforms         required_age\n",
+       "2438  windows;mac       0           \n",
+       "4248  windows           0           \n",
+       "6216  windows;mac;linux 0           \n",
+       "18918 windows;linux     0           \n",
+       "23322 windows           0           \n",
+       "24638 windows           0           \n",
+       "      categories                                                                                                                                               \n",
+       "2438  Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Workshop;Steam Leaderboards;Includes level editor;Commentary available\n",
+       "4248  Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Cloud                                                                 \n",
+       "6216  Single-player;Steam Achievements                                                                                                                         \n",
+       "18918 Single-player;Steam Achievements;Partial Controller Support                                                                                              \n",
+       "23322 Single-player;Steam Achievements;Steam Cloud;Includes level editor                                                                                       \n",
+       "24638 Local Multi-Player;Shared/Split Screen;Partial Controller Support                                                                                        \n",
+       "      genres                           steamspy_tags               achievements\n",
+       "2438  Action;Casual;Indie              Action;Casual;Shooter       35          \n",
+       "4248  Action;Adventure;Indie           Indie;Action;Adventure      13          \n",
+       "6216  Action;Casual;Free to Play;Indie Free to Play;Clicker;Casual 99          \n",
+       "18918 Action;Indie                     Action;Indie;Bullet Hell    23          \n",
+       "23322 Action;Indie                     Action;Indie;Free to Play   2           \n",
+       "24638 Action;Casual;Indie              Action;Indie;Casual         0           \n",
+       "      positive_ratings negative_ratings average_playtime median_playtime\n",
+       "2438  271              36               374              374            \n",
+       "4248  221              65               135              135            \n",
+       "6216  3850             494              423              224            \n",
+       "18918 7                1                0                0              \n",
+       "23322 7                1                0                0              \n",
+       "24638 1                2                0                0              \n",
+       "      owners         price\n",
+       "2438  0-20000        6.99 \n",
+       "4248  20000-50000    0.79 \n",
+       "6216  500000-1000000 0    \n",
+       "18918 0-20000        0.79 \n",
+       "23322 0-20000        0    \n",
+       "24638 0-20000        0    "
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "#here are missing values\n",
+    "empty_or_null_rows <- trim_page[is.null(trim_page$publisher) | trim_page$publisher == \"\", ]\n",
+    "head(empty_or_null_rows)\n",
+    "#filling in missing values\n",
+    "trim_page$publisher <- if(all(is.na(trim_page$publisher))) {\n",
+    "     trim_page$publisher <- trim_page$developer }"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "4608eb29",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-01-31T20:57:39.549460Z",
+     "iopub.status.busy": "2025-01-31T20:57:39.547955Z",
+     "iopub.status.idle": "2025-01-31T20:57:39.576506Z",
+     "shell.execute_reply": "2025-01-31T20:57:39.574877Z"
+    },
+    "papermill": {
+     "duration": 0.039119,
+     "end_time": "2025-01-31T20:57:39.578733",
+     "exception": false,
+     "start_time": "2025-01-31T20:57:39.539614",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<table class=\"dataframe\">\n",
+       "<caption>A data.frame: 0 × 17</caption>\n",
+       "<thead>\n",
+       "\t<tr><th scope=col>appid</th><th scope=col>name</th><th scope=col>release_date</th><th scope=col>english</th><th scope=col>developer</th><th scope=col>platforms</th><th scope=col>required_age</th><th scope=col>categories</th><th scope=col>genres</th><th scope=col>steamspy_tags</th><th scope=col>achievements</th><th scope=col>positive_ratings</th><th scope=col>negative_ratings</th><th scope=col>average_playtime</th><th scope=col>median_playtime</th><th scope=col>owners</th><th scope=col>price</th></tr>\n",
+       "\t<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>\n",
+       "</thead>\n",
+       "<tbody>\n",
+       "</tbody>\n",
+       "</table>\n"
+      ],
+      "text/latex": [
+       "A data.frame: 0 × 17\n",
+       "\\begin{tabular}{lllllllllllllllll}\n",
+       " appid & name & release\\_date & english & developer & platforms & required\\_age & categories & genres & steamspy\\_tags & achievements & positive\\_ratings & negative\\_ratings & average\\_playtime & median\\_playtime & owners & price\\\\\n",
+       " <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr>\\\\\n",
+       "\\hline\n",
+       "\\end{tabular}\n"
+      ],
+      "text/markdown": [
+       "\n",
+       "A data.frame: 0 × 17\n",
+       "\n",
+       "| appid &lt;chr&gt; | name &lt;chr&gt; | release_date &lt;chr&gt; | english &lt;chr&gt; | developer &lt;chr&gt; | platforms &lt;chr&gt; | required_age &lt;chr&gt; | categories &lt;chr&gt; | genres &lt;chr&gt; | steamspy_tags &lt;chr&gt; | achievements &lt;chr&gt; | positive_ratings &lt;chr&gt; | negative_ratings &lt;chr&gt; | average_playtime &lt;chr&gt; | median_playtime &lt;chr&gt; | owners &lt;chr&gt; | price &lt;chr&gt; |\n",
+       "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n",
+       "\n"
+      ],
+      "text/plain": [
+       "     appid name release_date english developer platforms required_age\n",
+       "     categories genres steamspy_tags achievements positive_ratings\n",
+       "     negative_ratings average_playtime median_playtime owners price"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "#see if worked\n",
+    "empty_or_null_row <- trim_page[is.null(trim_page$publisher) | trim_page$publisher == \"\", ]\n",
+    "head(empty_or_null_row)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a0bc2945",
+   "metadata": {
+    "papermill": {
+     "duration": 0.00658,
+     "end_time": "2025-01-31T20:57:39.591844",
+     "exception": false,
+     "start_time": "2025-01-31T20:57:39.585264",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "There are no more null categories in publisher so we will move on to making a new table from the requirements dataset."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "05a3d800",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-01-31T20:57:39.608488Z",
+     "iopub.status.busy": "2025-01-31T20:57:39.606962Z",
+     "iopub.status.idle": "2025-01-31T20:57:40.860272Z",
+     "shell.execute_reply": "2025-01-31T20:57:40.858555Z"
+    },
+    "papermill": {
+     "duration": 1.264202,
+     "end_time": "2025-01-31T20:57:40.862597",
+     "exception": false,
+     "start_time": "2025-01-31T20:57:39.598395",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<table class=\"dataframe\">\n",
+       "<caption>A tibble: 6 × 7</caption>\n",
+       "<thead>\n",
+       "\t<tr><th scope=col>steam_appid</th><th scope=col>pc_requirements</th><th scope=col>mac_requirements</th><th scope=col>linux_requirements</th><th scope=col>minimum</th><th scope=col>recommended</th><th scope=col>split_data</th></tr>\n",
+       "\t<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>\n",
+       "</thead>\n",
+       "<tbody>\n",
+       "\t<tr><td>10</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor</td></tr>\n",
+       "\t<tr><td>10</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td><td><span style=white-space:pre-wrap> 96mb ram                                                                 </span></td></tr>\n",
+       "\t<tr><td>10</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td><td><span style=white-space:pre-wrap> 16mb video card                                                          </span></td></tr>\n",
+       "\t<tr><td>10</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td><td><span style=white-space:pre-wrap> Windows XP                                                               </span></td></tr>\n",
+       "\t<tr><td>10</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td><td><span style=white-space:pre-wrap> Mouse                                                                    </span></td></tr>\n",
+       "\t<tr><td>10</td><td>{'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'}</td><td><span style=white-space:pre-wrap>{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}</span></td><td>{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}</td><td>500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection</td><td></td><td><span style=white-space:pre-wrap> Keyboard                                                                 </span></td></tr>\n",
+       "</tbody>\n",
+       "</table>\n"
+      ],
+      "text/latex": [
+       "A tibble: 6 × 7\n",
+       "\\begin{tabular}{lllllll}\n",
+       " steam\\_appid & pc\\_requirements & mac\\_requirements & linux\\_requirements & minimum & recommended & split\\_data\\\\\n",
+       " <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr>\\\\\n",
+       "\\hline\n",
+       "\t 10 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection &  & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor\\\\\n",
+       "\t 10 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection &  &  96mb ram                                                                 \\\\\n",
+       "\t 10 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection &  &  16mb video card                                                          \\\\\n",
+       "\t 10 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection &  &  Windows XP                                                               \\\\\n",
+       "\t 10 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection &  &  Mouse                                                                    \\\\\n",
+       "\t 10 & \\{'minimum': '\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\} & \\{'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'\\} & \\{'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'\\} & 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection &  &  Keyboard                                                                 \\\\\n",
+       "\\end{tabular}\n"
+      ],
+      "text/markdown": [
+       "\n",
+       "A tibble: 6 × 7\n",
+       "\n",
+       "| steam_appid &lt;chr&gt; | pc_requirements &lt;chr&gt; | mac_requirements &lt;chr&gt; | linux_requirements &lt;chr&gt; | minimum &lt;chr&gt; | recommended &lt;chr&gt; | split_data &lt;chr&gt; |\n",
+       "|---|---|---|---|---|---|---|\n",
+       "| 10 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor |\n",
+       "| 10 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |  96mb ram                                                                  |\n",
+       "| 10 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |  16mb video card                                                           |\n",
+       "| 10 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |  Windows XP                                                                |\n",
+       "| 10 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |  Mouse                                                                     |\n",
+       "| 10 | {'minimum': '\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Minimum:&lt;/strong&gt; 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t&lt;p&gt;&lt;strong&gt;Recommended:&lt;/strong&gt; 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection&lt;br /&gt;&lt;/p&gt;\\r\\n\\t\\t\\t'} | {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'} | {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'} | 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection | <!----> |  Keyboard                                                                  |\n",
+       "\n"
+      ],
+      "text/plain": [
+       "  steam_appid\n",
+       "1 10         \n",
+       "2 10         \n",
+       "3 10         \n",
+       "4 10         \n",
+       "5 10         \n",
+       "6 10         \n",
+       "  pc_requirements                                                                                                                                                                                                                                                                                                                             \n",
+       "1 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "2 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "3 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "4 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "5 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "6 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Recommended:</strong> 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection<br /></p>\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "  mac_requirements                                                                                                                                                                                 \n",
+       "1 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "2 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "3 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "4 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "5 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "6 {'minimum': 'Minimum: OS X  Snow Leopard 10.6.3, 1GB RAM, 4GB Hard Drive Space,NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection'}\n",
+       "  linux_requirements                                                                                                                                                                                                                                              \n",
+       "1 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "2 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "3 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "4 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "5 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "6 {'minimum': 'Minimum: Linux Ubuntu 12.04, Dual-core from Intel or AMD at 2.8 GHz, 1GB Memory, nVidia GeForce 8600/9600GT, ATI/AMD Radeaon HD2600/3600 (Graphic Drivers: nVidia 310, AMD 12.11), OpenGL 2.1, 4GB Hard Drive Space, OpenAL Compatible Sound Card'}\n",
+       "  minimum                                                                                                                                                                                                     \n",
+       "1 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "2 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "3 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "4 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "5 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "6 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection\n",
+       "  recommended\n",
+       "1            \n",
+       "2            \n",
+       "3            \n",
+       "4            \n",
+       "5            \n",
+       "6            \n",
+       "  split_data                                                                \n",
+       "1 {'minimum': '\\\\r\\\\n\\\\t\\\\t\\\\t<p><strong>Minimum:</strong> 500 mhz processor\n",
+       "2  96mb ram                                                                 \n",
+       "3  16mb video card                                                          \n",
+       "4  Windows XP                                                               \n",
+       "5  Mouse                                                                    \n",
+       "6  Keyboard                                                                 "
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "#creating new table from PC requirements\n",
+    "trim_required <- as.data.table(trim_require)\n",
+    "trim_required[ , split_data := lapply(strsplit(trim_required$pc_requirements, \",\"), function(x) x)]\n",
+    "pc_require <- unnest(trim_required, cols = c(split_data))\n",
+    "head(pc_require)\n",
+    "                                      #work in progress"
    ]
   }
  ],
@@ -549,14 +1253,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 9.546331,
-   "end_time": "2025-01-28T20:56:04.072173",
+   "duration": 16.742628,
+   "end_time": "2025-01-31T20:57:40.991092",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-01-28T20:55:54.525842",
+   "start_time": "2025-01-31T20:57:24.248464",
    "version": "2.6.0"
   }
  },
