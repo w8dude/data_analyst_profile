@@ -2,13 +2,13 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "8355cc5c",
+   "id": "4f0652df",
    "metadata": {
     "papermill": {
-     "duration": 0.004164,
-     "end_time": "2025-02-04T21:03:43.617013",
+     "duration": 0.004207,
+     "end_time": "2025-02-18T00:43:10.559662",
      "exception": false,
-     "start_time": "2025-02-04T21:03:43.612849",
+     "start_time": "2025-02-18T00:43:10.555455",
      "status": "completed"
     },
     "tags": []
@@ -20,13 +20,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5b0df60f",
+   "id": "09c24bb7",
    "metadata": {
     "papermill": {
-     "duration": 0.003331,
-     "end_time": "2025-02-04T21:03:43.623919",
+     "duration": 0.003538,
+     "end_time": "2025-02-18T00:43:10.567017",
      "exception": false,
-     "start_time": "2025-02-04T21:03:43.620588",
+     "start_time": "2025-02-18T00:43:10.563479",
      "status": "completed"
     },
     "tags": []
@@ -41,13 +41,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "decdc7f3",
+   "id": "0b62051b",
    "metadata": {
     "papermill": {
-     "duration": 0.003585,
-     "end_time": "2025-02-04T21:03:43.630791",
+     "duration": 0.003464,
+     "end_time": "2025-02-18T00:43:10.573991",
      "exception": false,
-     "start_time": "2025-02-04T21:03:43.627206",
+     "start_time": "2025-02-18T00:43:10.570527",
      "status": "completed"
     },
     "tags": []
@@ -59,13 +59,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "dbe67e0e",
+   "id": "79ee2405",
    "metadata": {
     "papermill": {
-     "duration": 0.003162,
-     "end_time": "2025-02-04T21:03:43.637111",
+     "duration": 0.003405,
+     "end_time": "2025-02-18T00:43:10.580906",
      "exception": false,
-     "start_time": "2025-02-04T21:03:43.633949",
+     "start_time": "2025-02-18T00:43:10.577501",
      "status": "completed"
     },
     "tags": []
@@ -77,21 +77,21 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "650c82f1",
+   "id": "3d69ef9e",
    "metadata": {
     "_execution_state": "idle",
     "_uuid": "051d70d956493feee0c6d64651c6a088724dca2a",
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:43.647824Z",
-     "iopub.status.busy": "2025-02-04T21:03:43.645747Z",
-     "iopub.status.idle": "2025-02-04T21:03:45.282557Z",
-     "shell.execute_reply": "2025-02-04T21:03:45.279996Z"
+     "iopub.execute_input": "2025-02-18T00:43:10.592010Z",
+     "iopub.status.busy": "2025-02-18T00:43:10.589793Z",
+     "iopub.status.idle": "2025-02-18T00:43:12.251343Z",
+     "shell.execute_reply": "2025-02-18T00:43:12.249343Z"
     },
     "papermill": {
-     "duration": 1.646153,
-     "end_time": "2025-02-04T21:03:45.286569",
+     "duration": 1.669554,
+     "end_time": "2025-02-18T00:43:12.253838",
      "exception": false,
-     "start_time": "2025-02-04T21:03:43.640416",
+     "start_time": "2025-02-18T00:43:10.584284",
      "status": "completed"
     },
     "tags": []
@@ -196,13 +196,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "dff6f80a",
+   "id": "726664eb",
    "metadata": {
     "papermill": {
-     "duration": 0.0041,
-     "end_time": "2025-02-04T21:03:45.294976",
+     "duration": 0.004308,
+     "end_time": "2025-02-18T00:43:12.262632",
      "exception": false,
-     "start_time": "2025-02-04T21:03:45.290876",
+     "start_time": "2025-02-18T00:43:12.258324",
      "status": "completed"
     },
     "tags": []
@@ -215,19 +215,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "fe221d01",
+   "id": "14f9a907",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:45.348742Z",
-     "iopub.status.busy": "2025-02-04T21:03:45.306277Z",
-     "iopub.status.idle": "2025-02-04T21:03:50.660453Z",
-     "shell.execute_reply": "2025-02-04T21:03:50.658559Z"
+     "iopub.execute_input": "2025-02-18T00:43:12.305851Z",
+     "iopub.status.busy": "2025-02-18T00:43:12.273744Z",
+     "iopub.status.idle": "2025-02-18T00:43:17.557216Z",
+     "shell.execute_reply": "2025-02-18T00:43:17.555437Z"
     },
     "papermill": {
-     "duration": 5.364797,
-     "end_time": "2025-02-04T21:03:50.664106",
+     "duration": 5.292565,
+     "end_time": "2025-02-18T00:43:17.559908",
      "exception": false,
-     "start_time": "2025-02-04T21:03:45.299309",
+     "start_time": "2025-02-18T00:43:12.267343",
      "status": "completed"
     },
     "tags": []
@@ -241,13 +241,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b8212353",
+   "id": "391f14b6",
    "metadata": {
     "papermill": {
-     "duration": 0.003704,
-     "end_time": "2025-02-04T21:03:50.671853",
+     "duration": 0.004738,
+     "end_time": "2025-02-18T00:43:17.568923",
      "exception": false,
-     "start_time": "2025-02-04T21:03:50.668149",
+     "start_time": "2025-02-18T00:43:17.564185",
      "status": "completed"
     },
     "tags": []
@@ -259,19 +259,19 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "5d91c12f",
+   "id": "6a1ac6fb",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:50.682920Z",
-     "iopub.status.busy": "2025-02-04T21:03:50.681354Z",
-     "iopub.status.idle": "2025-02-04T21:03:50.916800Z",
-     "shell.execute_reply": "2025-02-04T21:03:50.914211Z"
+     "iopub.execute_input": "2025-02-18T00:43:17.580876Z",
+     "iopub.status.busy": "2025-02-18T00:43:17.579314Z",
+     "iopub.status.idle": "2025-02-18T00:43:17.804325Z",
+     "shell.execute_reply": "2025-02-18T00:43:17.802501Z"
     },
     "papermill": {
-     "duration": 0.244383,
-     "end_time": "2025-02-04T21:03:50.919998",
+     "duration": 0.233768,
+     "end_time": "2025-02-18T00:43:17.806748",
      "exception": false,
-     "start_time": "2025-02-04T21:03:50.675615",
+     "start_time": "2025-02-18T00:43:17.572980",
      "status": "completed"
     },
     "tags": []
@@ -543,13 +543,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "1aba694e",
+   "id": "0c1862cd",
    "metadata": {
     "papermill": {
-     "duration": 0.005118,
-     "end_time": "2025-02-04T21:03:50.930710",
+     "duration": 0.005428,
+     "end_time": "2025-02-18T00:43:17.817874",
      "exception": false,
-     "start_time": "2025-02-04T21:03:50.925592",
+     "start_time": "2025-02-18T00:43:17.812446",
      "status": "completed"
     },
     "tags": []
@@ -562,19 +562,19 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "22241c07",
+   "id": "d2a78cb0",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:50.945120Z",
-     "iopub.status.busy": "2025-02-04T21:03:50.943487Z",
-     "iopub.status.idle": "2025-02-04T21:03:56.396549Z",
-     "shell.execute_reply": "2025-02-04T21:03:56.394733Z"
+     "iopub.execute_input": "2025-02-18T00:43:17.832594Z",
+     "iopub.status.busy": "2025-02-18T00:43:17.830878Z",
+     "iopub.status.idle": "2025-02-18T00:43:23.549089Z",
+     "shell.execute_reply": "2025-02-18T00:43:23.547306Z"
     },
     "papermill": {
-     "duration": 5.464587,
-     "end_time": "2025-02-04T21:03:56.400328",
+     "duration": 5.728803,
+     "end_time": "2025-02-18T00:43:23.552038",
      "exception": false,
-     "start_time": "2025-02-04T21:03:50.935741",
+     "start_time": "2025-02-18T00:43:17.823235",
      "status": "completed"
     },
     "tags": []
@@ -590,19 +590,19 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "48e338a3",
+   "id": "84a40268",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:56.414292Z",
-     "iopub.status.busy": "2025-02-04T21:03:56.412749Z",
-     "iopub.status.idle": "2025-02-04T21:03:56.636875Z",
-     "shell.execute_reply": "2025-02-04T21:03:56.634361Z"
+     "iopub.execute_input": "2025-02-18T00:43:23.569166Z",
+     "iopub.status.busy": "2025-02-18T00:43:23.567290Z",
+     "iopub.status.idle": "2025-02-18T00:43:23.793282Z",
+     "shell.execute_reply": "2025-02-18T00:43:23.791453Z"
     },
     "papermill": {
-     "duration": 0.234265,
-     "end_time": "2025-02-04T21:03:56.639952",
+     "duration": 0.238257,
+     "end_time": "2025-02-18T00:43:23.795917",
      "exception": false,
-     "start_time": "2025-02-04T21:03:56.405687",
+     "start_time": "2025-02-18T00:43:23.557660",
      "status": "completed"
     },
     "tags": []
@@ -876,19 +876,19 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "66dd80f8",
+   "id": "b4bc591f",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:56.656757Z",
-     "iopub.status.busy": "2025-02-04T21:03:56.654817Z",
-     "iopub.status.idle": "2025-02-04T21:03:56.712728Z",
-     "shell.execute_reply": "2025-02-04T21:03:56.710852Z"
+     "iopub.execute_input": "2025-02-18T00:43:23.814662Z",
+     "iopub.status.busy": "2025-02-18T00:43:23.812989Z",
+     "iopub.status.idle": "2025-02-18T00:43:23.873046Z",
+     "shell.execute_reply": "2025-02-18T00:43:23.871062Z"
     },
     "papermill": {
-     "duration": 0.069773,
-     "end_time": "2025-02-04T21:03:56.716098",
+     "duration": 0.072723,
+     "end_time": "2025-02-18T00:43:23.876066",
      "exception": false,
-     "start_time": "2025-02-04T21:03:56.646325",
+     "start_time": "2025-02-18T00:43:23.803343",
      "status": "completed"
     },
     "tags": []
@@ -1009,19 +1009,19 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "0317e9bc",
+   "id": "a3d5bd10",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:56.733225Z",
-     "iopub.status.busy": "2025-02-04T21:03:56.731652Z",
-     "iopub.status.idle": "2025-02-04T21:03:56.764339Z",
-     "shell.execute_reply": "2025-02-04T21:03:56.761879Z"
+     "iopub.execute_input": "2025-02-18T00:43:23.894459Z",
+     "iopub.status.busy": "2025-02-18T00:43:23.892783Z",
+     "iopub.status.idle": "2025-02-18T00:43:23.924202Z",
+     "shell.execute_reply": "2025-02-18T00:43:23.922494Z"
     },
     "papermill": {
-     "duration": 0.044551,
-     "end_time": "2025-02-04T21:03:56.767491",
+     "duration": 0.04298,
+     "end_time": "2025-02-18T00:43:23.926700",
      "exception": false,
-     "start_time": "2025-02-04T21:03:56.722940",
+     "start_time": "2025-02-18T00:43:23.883720",
      "status": "completed"
     },
     "tags": []
@@ -1074,13 +1074,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "eeb2e5f9",
+   "id": "4f88a568",
    "metadata": {
     "papermill": {
-     "duration": 0.006828,
-     "end_time": "2025-02-04T21:03:56.781478",
+     "duration": 0.007861,
+     "end_time": "2025-02-18T00:43:23.941610",
      "exception": false,
-     "start_time": "2025-02-04T21:03:56.774650",
+     "start_time": "2025-02-18T00:43:23.933749",
      "status": "completed"
     },
     "tags": []
@@ -1092,19 +1092,19 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "d310ed37",
+   "id": "6c0200fe",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-04T21:03:56.799795Z",
-     "iopub.status.busy": "2025-02-04T21:03:56.797824Z",
-     "iopub.status.idle": "2025-02-04T21:06:23.618870Z",
-     "shell.execute_reply": "2025-02-04T21:06:23.615921Z"
+     "iopub.execute_input": "2025-02-18T00:43:23.961501Z",
+     "iopub.status.busy": "2025-02-18T00:43:23.959850Z",
+     "iopub.status.idle": "2025-02-18T00:46:54.667732Z",
+     "shell.execute_reply": "2025-02-18T00:46:54.665781Z"
     },
     "papermill": {
-     "duration": 146.844822,
-     "end_time": "2025-02-04T21:06:23.633036",
+     "duration": 210.729419,
+     "end_time": "2025-02-18T00:46:54.678184",
      "exception": false,
-     "start_time": "2025-02-04T21:03:56.788214",
+     "start_time": "2025-02-18T00:43:23.948765",
      "status": "completed"
     },
     "tags": []
@@ -1114,78 +1114,71 @@
      "data": {
       "text/html": [
        "<table class=\"dataframe\">\n",
-       "<caption>A data.frame: 6 × 14</caption>\n",
+       "<caption>A data.frame: 6 × 15</caption>\n",
        "<thead>\n",
-       "\t<tr><th></th><th scope=col>Min_Processor</th><th scope=col>Min_RAM</th><th scope=col>Min_VideoCard</th><th scope=col>Min_OS</th><th scope=col>Min_Input1</th><th scope=col>Min_Input2</th><th scope=col>Min_Connection</th><th scope=col>Rec_Processor</th><th scope=col>Rec_RAM</th><th scope=col>Rec_VideoCard</th><th scope=col>Rec_OS</th><th scope=col>Rec_Input1</th><th scope=col>Rec_Input2</th><th scope=col>Rec_Connection</th></tr>\n",
-       "\t<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>\n",
+       "\t<tr><th></th><th scope=col>id</th><th scope=col>Min_Processor</th><th scope=col>Min_RAM</th><th scope=col>Min_VideoCard</th><th scope=col>Min_OS</th><th scope=col>Min_Input1</th><th scope=col>Min_Input2</th><th scope=col>Min_Connection</th><th scope=col>Rec_Processor</th><th scope=col>Rec_RAM</th><th scope=col>Rec_VideoCard</th><th scope=col>Rec_OS</th><th scope=col>Rec_Input1</th><th scope=col>Rec_Input2</th><th scope=col>Rec_Connection</th></tr>\n",
+       "\t<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>\n",
        "</thead>\n",
        "<tbody>\n",
-       "\t<tr><th scope=row>1</th><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>\n",
-       "\t<tr><th scope=row>2</th><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>\n",
-       "\t<tr><th scope=row>3</th><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>\n",
-       "\t<tr><th scope=row>4</th><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>\n",
-       "\t<tr><th scope=row>5</th><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>\n",
-       "\t<tr><th scope=row>6</th><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>\n",
+       "\t<tr><th scope=row>1</th><td>10</td><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t</td><td>800 mhz</td><td>128mb</td><td>32mb+</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t'}</td></tr>\n",
+       "\t<tr><th scope=row>2</th><td>20</td><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t</td><td>800 mhz</td><td>128mb</td><td>32mb+</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t'}</td></tr>\n",
+       "\t<tr><th scope=row>3</th><td>30</td><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t</td><td>800 mhz</td><td>128mb</td><td>32mb+</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t'}</td></tr>\n",
+       "\t<tr><th scope=row>4</th><td>40</td><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t</td><td>800 mhz</td><td>128mb</td><td>32mb+</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t'}</td></tr>\n",
+       "\t<tr><th scope=row>5</th><td>50</td><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t</td><td>800 mhz</td><td>128mb</td><td>32mb+</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t'}</td></tr>\n",
+       "\t<tr><th scope=row>6</th><td>60</td><td>500 mhz</td><td>96mb</td><td>16mb</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t</td><td>800 mhz</td><td>128mb</td><td>32mb+</td><td>Windows XP</td><td>Mouse</td><td>Keyboard</td><td>Internet Connection\\r\\n\\t\\t\\t'}</td></tr>\n",
        "</tbody>\n",
        "</table>\n"
       ],
       "text/latex": [
-       "A data.frame: 6 × 14\n",
-       "\\begin{tabular}{r|llllllllllllll}\n",
-       "  & Min\\_Processor & Min\\_RAM & Min\\_VideoCard & Min\\_OS & Min\\_Input1 & Min\\_Input2 & Min\\_Connection & Rec\\_Processor & Rec\\_RAM & Rec\\_VideoCard & Rec\\_OS & Rec\\_Input1 & Rec\\_Input2 & Rec\\_Connection\\\\\n",
-       "  & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <lgl> & <lgl> & <lgl> & <lgl> & <lgl> & <lgl> & <lgl>\\\\\n",
+       "A data.frame: 6 × 15\n",
+       "\\begin{tabular}{r|lllllllllllllll}\n",
+       "  & id & Min\\_Processor & Min\\_RAM & Min\\_VideoCard & Min\\_OS & Min\\_Input1 & Min\\_Input2 & Min\\_Connection & Rec\\_Processor & Rec\\_RAM & Rec\\_VideoCard & Rec\\_OS & Rec\\_Input1 & Rec\\_Input2 & Rec\\_Connection\\\\\n",
+       "  & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr> & <chr>\\\\\n",
        "\\hline\n",
-       "\t1 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}tRecommended: 800 mhz processor & NA & NA & NA & NA & NA & NA & NA\\\\\n",
-       "\t2 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}tRecommended: 800 mhz processor & NA & NA & NA & NA & NA & NA & NA\\\\\n",
-       "\t3 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}tRecommended: 800 mhz processor & NA & NA & NA & NA & NA & NA & NA\\\\\n",
-       "\t4 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}tRecommended: 800 mhz processor & NA & NA & NA & NA & NA & NA & NA\\\\\n",
-       "\t5 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}tRecommended: 800 mhz processor & NA & NA & NA & NA & NA & NA & NA\\\\\n",
-       "\t6 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}tRecommended: 800 mhz processor & NA & NA & NA & NA & NA & NA & NA\\\\\n",
+       "\t1 & 10 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t & 800 mhz & 128mb & 32mb+ & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\}\\\\\n",
+       "\t2 & 20 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t & 800 mhz & 128mb & 32mb+ & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\}\\\\\n",
+       "\t3 & 30 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t & 800 mhz & 128mb & 32mb+ & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\}\\\\\n",
+       "\t4 & 40 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t & 800 mhz & 128mb & 32mb+ & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\}\\\\\n",
+       "\t5 & 50 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t & 800 mhz & 128mb & 32mb+ & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\}\\\\\n",
+       "\t6 & 60 & 500 mhz & 96mb & 16mb & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t & 800 mhz & 128mb & 32mb+ & Windows XP & Mouse & Keyboard & Internet Connection\\textbackslash{}r\\textbackslash{}n\\textbackslash{}t\\textbackslash{}t\\textbackslash{}t'\\}\\\\\n",
        "\\end{tabular}\n"
       ],
       "text/markdown": [
        "\n",
-       "A data.frame: 6 × 14\n",
+       "A data.frame: 6 × 15\n",
        "\n",
-       "| <!--/--> | Min_Processor &lt;chr&gt; | Min_RAM &lt;chr&gt; | Min_VideoCard &lt;chr&gt; | Min_OS &lt;chr&gt; | Min_Input1 &lt;chr&gt; | Min_Input2 &lt;chr&gt; | Min_Connection &lt;chr&gt; | Rec_Processor &lt;lgl&gt; | Rec_RAM &lt;lgl&gt; | Rec_VideoCard &lt;lgl&gt; | Rec_OS &lt;lgl&gt; | Rec_Input1 &lt;lgl&gt; | Rec_Input2 &lt;lgl&gt; | Rec_Connection &lt;lgl&gt; |\n",
-       "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n",
-       "| 1 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor | NA | NA | NA | NA | NA | NA | NA |\n",
-       "| 2 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor | NA | NA | NA | NA | NA | NA | NA |\n",
-       "| 3 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor | NA | NA | NA | NA | NA | NA | NA |\n",
-       "| 4 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor | NA | NA | NA | NA | NA | NA | NA |\n",
-       "| 5 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor | NA | NA | NA | NA | NA | NA | NA |\n",
-       "| 6 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\tRecommended: 800 mhz processor | NA | NA | NA | NA | NA | NA | NA |\n",
+       "| <!--/--> | id &lt;chr&gt; | Min_Processor &lt;chr&gt; | Min_RAM &lt;chr&gt; | Min_VideoCard &lt;chr&gt; | Min_OS &lt;chr&gt; | Min_Input1 &lt;chr&gt; | Min_Input2 &lt;chr&gt; | Min_Connection &lt;chr&gt; | Rec_Processor &lt;chr&gt; | Rec_RAM &lt;chr&gt; | Rec_VideoCard &lt;chr&gt; | Rec_OS &lt;chr&gt; | Rec_Input1 &lt;chr&gt; | Rec_Input2 &lt;chr&gt; | Rec_Connection &lt;chr&gt; |\n",
+       "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n",
+       "| 1 | 10 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t | 800 mhz | 128mb | 32mb+ | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t'} |\n",
+       "| 2 | 20 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t | 800 mhz | 128mb | 32mb+ | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t'} |\n",
+       "| 3 | 30 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t | 800 mhz | 128mb | 32mb+ | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t'} |\n",
+       "| 4 | 40 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t | 800 mhz | 128mb | 32mb+ | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t'} |\n",
+       "| 5 | 50 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t | 800 mhz | 128mb | 32mb+ | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t'} |\n",
+       "| 6 | 60 | 500 mhz | 96mb | 16mb | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t | 800 mhz | 128mb | 32mb+ | Windows XP | Mouse | Keyboard | Internet Connection\\r\\n\\t\\t\\t'} |\n",
        "\n"
       ],
       "text/plain": [
-       "  Min_Processor Min_RAM Min_VideoCard Min_OS     Min_Input1 Min_Input2\n",
-       "1 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
-       "2 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
-       "3 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
-       "4 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
-       "5 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
-       "6 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
-       "  Min_Connection                                                  \n",
-       "1 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\tRecommended: 800 mhz processor\n",
-       "2 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\tRecommended: 800 mhz processor\n",
-       "3 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\tRecommended: 800 mhz processor\n",
-       "4 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\tRecommended: 800 mhz processor\n",
-       "5 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\tRecommended: 800 mhz processor\n",
-       "6 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\tRecommended: 800 mhz processor\n",
-       "  Rec_Processor Rec_RAM Rec_VideoCard Rec_OS Rec_Input1 Rec_Input2\n",
-       "1 NA            NA      NA            NA     NA         NA        \n",
-       "2 NA            NA      NA            NA     NA         NA        \n",
-       "3 NA            NA      NA            NA     NA         NA        \n",
-       "4 NA            NA      NA            NA     NA         NA        \n",
-       "5 NA            NA      NA            NA     NA         NA        \n",
-       "6 NA            NA      NA            NA     NA         NA        \n",
-       "  Rec_Connection\n",
-       "1 NA            \n",
-       "2 NA            \n",
-       "3 NA            \n",
-       "4 NA            \n",
-       "5 NA            \n",
-       "6 NA            "
+       "  id Min_Processor Min_RAM Min_VideoCard Min_OS     Min_Input1 Min_Input2\n",
+       "1 10 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
+       "2 20 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
+       "3 30 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
+       "4 40 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
+       "5 50 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
+       "6 60 500 mhz       96mb    16mb          Windows XP Mouse      Keyboard  \n",
+       "  Min_Connection                     Rec_Processor Rec_RAM Rec_VideoCard\n",
+       "1 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t 800 mhz       128mb   32mb+        \n",
+       "2 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t 800 mhz       128mb   32mb+        \n",
+       "3 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t 800 mhz       128mb   32mb+        \n",
+       "4 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t 800 mhz       128mb   32mb+        \n",
+       "5 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t 800 mhz       128mb   32mb+        \n",
+       "6 Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t 800 mhz       128mb   32mb+        \n",
+       "  Rec_OS     Rec_Input1 Rec_Input2 Rec_Connection                      \n",
+       "1 Windows XP Mouse      Keyboard   Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "2 Windows XP Mouse      Keyboard   Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "3 Windows XP Mouse      Keyboard   Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "4 Windows XP Mouse      Keyboard   Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "5 Windows XP Mouse      Keyboard   Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t'}\n",
+       "6 Windows XP Mouse      Keyboard   Internet Connection\\\\r\\\\n\\\\t\\\\t\\\\t'}"
       ]
      },
      "metadata": {},
@@ -1198,24 +1191,38 @@
     "# Function to extract requirements\n",
     "extract_requirements <- function(text) {\n",
     "  # Remove unnecessary characters and split by <br/>\n",
-    "  text <- gsub(\"\\\\r\\\\n\\\\t\", \"\", text)  # Clean up whitespace                #not catching all instances\n",
+    "  text <- gsub(\"\\\\r\\\\n\\\\t\", \"\", text)  # Clean up whitespace  #not catching all instances\n",
     "  text <- gsub(\"<.*?>\", \"\", text)      # Remove HTML tags\n",
-    "  parts <- str_split(text, \"<br/>\")[[1]]\n",
-    "  # Extract minimum requirements\n",
-    "  minimum_match <- str_match(parts[1], \"Minimum: (.+)\")\n",
-    "  minimum <- ifelse(!is.na(minimum_match[1, 2]), minimum_match[1, 2], NA)\n",
-    "  # Extract recommended requirements\n",
-    "  recommended_match <- str_match(parts[2], \"Recommended: (.+)\")                       #not being found\n",
-    "  recommended <- ifelse(!is.na(recommended_match[1, 2]), recommended_match[1, 2], NA)\n",
+    "  parts <- str_split(text, \"</p>\")[[1]]\n",
+    "\n",
+    "  minimum <- NA\n",
+    "  recommended <- NA\n",
+    "  #find minimum values\n",
+    "  for (part in parts) {\n",
+    "    min_match <- str_match(text, \"Minimum: (.+?)(?=(Recommended:|$))\") # Stop at \"Recommended:\" or end of string\n",
+    "    if (!is.na(min_match[1, 2])) {\n",
+    "      minimum <- min_match[1, 2]\n",
+    "    }\n",
+    "    #find recommended values\n",
+    "    rec_match <- str_match(part, \"Recommended: (.+)\")  # Look for \"Recommended:\" anywhere\n",
+    "    if (!is.na(rec_match[1, 2])) {\n",
+    "      recommended <- rec_match[1, 2]\n",
+    "    }\n",
+    "  }\n",
     "\n",
     "  return(data.frame(Minimum = minimum, Recommended = recommended))\n",
     "}\n",
-    "#apply above function\n",
+    "#apply above function, but keep the IDs!\n",
     "extracted_data <- apply(trim_required, 1, function(row) {\n",
-    "  extract_requirements(row[\"pc_requirements\"])\n",
+    "  extracted <- extract_requirements(row[\"pc_requirements\"])\n",
+    "  # Add the ID to the extracted data frame\n",
+    "  extracted$id <- row[\"steam_appid\"]\n",
+    "  return(extracted)\n",
     "})\n",
     "# Combine the list of data frames into a single data frame\n",
     "final_data <- do.call(rbind, extracted_data)\n",
+    "# Reorder columns to put 'id' first\n",
+    "final_data <- final_data[, c(\"id\", names(final_data)[names(final_data) != \"id\"])]\n",
     "#head(final_data)\n",
     "# Further processing (splitting into individual components)\n",
     "split_requirements <- function(req_string) {\n",
@@ -1245,12 +1252,54 @@
     "  min_data <- split_requirements(final_data$Minimum[i])\n",
     "  rec_data <- split_requirements(final_data$Recommended[i])\n",
     "  \n",
-    "  combined_row <- cbind(min_data, rec_data)\n",
-    "  colnames(combined_row) <- c(paste0(\"Min_\", colnames(min_data)), paste0(\"Rec_\", colnames(rec_data)))\n",
+    "  combined_row <- cbind(final_data$id[i], min_data, rec_data) # Add ID here\n",
+    "  colnames(combined_row) <- c(\"id\", paste0(\"Min_\", colnames(min_data)), paste0(\"Rec_\", colnames(rec_data)))\n",
     "  final_split_data <- rbind(final_split_data, combined_row)\n",
     "}\n",
-    "head(final_split_data)\n",
-    "                                      #work in progress"
+    "head(final_split_data)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "64677b24",
+   "metadata": {
+    "papermill": {
+     "duration": 0.007497,
+     "end_time": "2025-02-18T00:46:54.699005",
+     "exception": false,
+     "start_time": "2025-02-18T00:46:54.691508",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "And another Table for categories."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "c57ffeb3",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-02-18T00:46:54.717686Z",
+     "iopub.status.busy": "2025-02-18T00:46:54.716060Z",
+     "iopub.status.idle": "2025-02-18T00:46:54.731985Z",
+     "shell.execute_reply": "2025-02-18T00:46:54.730162Z"
+    },
+    "papermill": {
+     "duration": 0.028308,
+     "end_time": "2025-02-18T00:46:54.734744",
+     "exception": false,
+     "start_time": "2025-02-18T00:46:54.706436",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#creating a new table from Steam Categories\n",
+    "trim_paged <- data.frame(trim_page)\n"
    ]
   }
  ],
@@ -1285,14 +1334,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 163.523818,
-   "end_time": "2025-02-04T21:06:23.762755",
+   "duration": 228.037622,
+   "end_time": "2025-02-18T00:46:54.870242",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-02-04T21:03:40.238937",
+   "start_time": "2025-02-18T00:43:06.832620",
    "version": "2.6.0"
   }
  },
